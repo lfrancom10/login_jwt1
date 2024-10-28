@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultados</title>
+</head>
+<body>
+<h1>Resultados de la búsqueda</h1>
+<ul>
+    <li th:each="dato : ${datos}">
+        <p th:text="${dato.nombre} + ' - ' + ${dato.descripcion}"></p>
+    </li>
+</ul>
+</body>
+</html>

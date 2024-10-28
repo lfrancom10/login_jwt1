@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Búsqueda</title>
+</head>
+<body>
+<h1>Resultados de la Búsqueda</h1>
+<form th:action="@{/buscar}" method="get">
+    <input type="text" name="query" placeholder="Buscar..." />
+    <button type="submit">Buscar</button>
+</form>
+
+<ul>
+    <li th:each="dato : ${resultados}">
+        <span th:text="${dato}"></span>
+    </li>
+</ul>
+</body>
+</html>
